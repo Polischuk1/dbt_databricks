@@ -6,13 +6,24 @@ sources:
     schema: dbt_partner_connect_2024_10_10_08_3023
     tables:
       - name: customers
+        columns:
+          - name: customer_id
+            tests:
+              - unique
+              - not_null
+              
      
   - name: jaffle_shop_orders
     database: hive_metastore
     schema: default
     tables:
       - name: jaffle_shop_orders
-        
+        columns: 
+          - name: id
+            tests:
+              - unique
+              - not_null
+              
   - name: stripe
     database: hive_metastore
     schema: default
