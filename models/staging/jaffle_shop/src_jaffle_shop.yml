@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: hive_metastore
+    schema: dbt_partner_connect_2024_10_10_08_3023
+    tables:
+      - name: customers
+     
+  - name: jaffle_shop_orders
+    database: hive_metastore
+    schema: default
+    tables:
+      - name: jaffle_shop_orders
+        
+  - name: stripe
+    database: hive_metastore
+    schema: default
+    tables:
+      - name: stripe_payments
